@@ -249,6 +249,11 @@ const SAMPLE_MIME = 'text/x-barcode-sample';
 
 const S = { reader: null, live: false, history: [], lastQR: null };
 
+// qrcode-generator encodes bytes as Latin-1 by default, which quietly mangles
+// anything outside ASCII — an em dash comes back as a control character, and
+// accents or non-Latin scripts become rubbish. Switch it to UTF-8.
+qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+
 function toast(m){ const t=$('toast'); t.textContent=m; t.classList.add('show');
   clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),2800); }
 
