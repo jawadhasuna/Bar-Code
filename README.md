@@ -2,7 +2,7 @@
 
 **Scan QR codes and barcodes, and see everything hidden inside them.**
 
-### 🔗 Live site: <https://bar-code.vercel.app>
+### 🔗 Live site: <https://barcodelens.vercel.app>
 
 Point it at a code — from a photo or your camera — and it shows you the raw contents
 *and* what they actually mean, without ever opening the link.
